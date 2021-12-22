@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Rock Paper Scissors | Adrian Iskra</title>
+</head>
+<body>
+    <!-- LANDING -->
+    <section id="section-1">
+        <div class="background"></div>
+        <div class="black-box"></div>
+
+        <nav class="navbar">
+            <div class="logo">
+                <span>RPS</span><span>.</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu">
+                <a href="" class="link">Github</a>
+                <a href="https://www.afiniti.com/corporate/rock-paper-scissors" target="_blank" class="link">Cloned from</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <h1 class="header" data-aos="fade-up" data-aos-delay="0">Rock, Paper, Scissors</h1>
+            <p class="description" data-aos="fade-up" data-aos-delay="50">Try your luck playing the rock paper scissors game.</p>
+
+            <div class="buttons">
+                <div class="button" data-aos="fade-right" data-aos-delay="100">
+                    <a class="play" href="#game">
+                        <img src="/resources/icons/play.png" alt="Play" class="icon16">
+                    </a>
+                    <div class="text-content">
+                        <h2 class="title">Play the game</h2>
+                        <span class="sub-header">Play our standard version of rock paper scissors game.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="game">
+        <div class="topbar">
+            <div class="logo black">
+                <span>RPS</span><span>.</span>
+            </div>
+        </div>
+
+        <div class="main-info">
+            <div class="round-wrapper">
+                <span id="round">ROUND 1</span>
+            </div>
+
+            <div class="game-status">
+                <div class="score-wrapper">
+                    <span class="title">Win</span>
+                    <span class="score" id='user-score'>0</span>
+                </div>
+
+                <div class="score-wrapper">
+                    <span class="title">Ties</span>
+                    <span class="score" id="tie-score">0</span>
+                </div>
+
+                <div class="score-wrapper">
+                    <span class="title">Win</span>
+                    <span class="score" id="ai-score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game">
+            <div class="box player">
+                <span class="who">YOU</span>
+                <img src="/resources/rps/shake.png" alt="Player move" class='move' id="user-hand">
+
+                <div class="user-buttons">
+                    <span class="button user-btn rock" data-type="rock">
+                        <svg viewBox="0 0 60 60">
+                            <g fill="none" fill-rule="evenodd">
+                                <circle fill="#F05454" cx="30" cy="30" r="30"></circle>
+                                <path d="M37.048 23.704h-5.492v-2.53L30.38 20h-8.02L16 26.36v7.28L22.36 40h12.096l1.13-1.13 1.48-9.918 1.156-.778v-3.296l-1.174-1.174zm-.307 3.677l-1.056.704-1.481 10.082-.352.352H22.974l-5.493-5.493v-6.052l5.493-5.493h6.793l.307.308v1.915h-2.963v1.481h9.322l.308.308v1.888z" fill="#FAF9F8" fill-rule="nonzero">
+                                </path>
+                            </g>
+                        </svg>
+                    </span>
+
+                    <span class="button user-btn paper" data-type="paper">
+                        <svg viewBox="0 0 60 60">
+                            <g fill="none" fill-rule="evenodd">
+                                <circle fill="#F05454" cx="30" cy="30" r="30"></circle>
+                                <path d="M39.704 38.826v-2.53h3.27l1.174-1.174v-2.53h1.789l1.174-1.173V28.58l-1.174-1.174h-1.048v-2.53l-1.174-1.173h-8.519l.434-.434v-2.096L34.456 20H22.359L16 26.36v7.28L22.36 40h16.17l1.174-1.174zm-16.73-.307l-5.493-5.493v-6.052l5.493-5.493h10.867l.307.308v.867L33.1 23.704h-5.989v1.481H43.1l.307.308v1.914h-11.11v1.482h13.025l.308.307v1.608l-.308.307H32.296v1.482h10.37v1.914l-.307.308H32.296v1.481h5.926v1.915l-.307.308h-14.94z" fill="#FAF9F8" fill-rule="nonzero"></path>
+                            </g>
+                        </svg>
+                    </span>
+
+                    <span class="button user-btn scissors" data-type="scissors">
+                        <svg viewBox="0 0 60 60">
+                            <g fill="none" fill-rule="evenodd">
+                            <circle fill="#F05454" cx="30" cy="30" r="30"></circle>
+                            <path d="M46 31.563l-6.104-2.674h5.297l1.177-1.174v-2.837l-1.174-1.174h-13.64v-2.53L30.38 20h-8.02L16 26.36v7.28L22.36 40h10.614l1.111-1.111 1-6.004 8.37 3.215 1.541-.415 1.419-2.455L46 31.563zM44.037 34.4l-.481.13-9.63-3.704-1.211 7.322-.37.37h-9.37l-5.494-5.492v-6.052l5.493-5.493h6.793l.307.308v1.915H26.37v1.481h18.211l.308.308V27.1l-.308.307H35.26v1.063l9.482 4.167.1.37-.804 1.393z" fill="#FAF9F8" fill-rule="nonzero"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="box info">
+                <span class="header">ROUNDS</span>
+
+                <div class="latest" id="row-wrapper"></div>
+
+                <div class="action-buttons">
+                    <button id="reset-btn" class="action-btn">Reset</button>
+                </div>
+            </div>
+
+            <div class="box ai">
+                <span class="who">AI (Random)</span>
+                <img src="/resources/rps/shake.png" alt="Player move" class="move" id="ai-hand">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="description">
+            Everything is coded from scratch. Created in almost 8 hours. The website is a cloned version of
+            <a href="https://www.afiniti.com/corporate/rock-paper-scissors" target="_blank" class="original">afiniti</a> website. The whole code is on my github.
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

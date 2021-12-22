@@ -28,10 +28,10 @@ $(document).ready(function() {
     };
 
     const HANDS = {
-        rock: '/resources/rps/rock.png',
-        paper: '/resources/rps/paper.png',
-        scissors: '/resources/rps/scissors.png',
-        shake: '/resources/rps/shake.png',
+        rock: 'resources/rps/rock.png',
+        paper: 'resources/rps/paper.png',
+        scissors: 'resources/rps/scissors.png',
+        shake: 'resources/rps/shake.png',
     };
 
     const SVGs = {
